@@ -1,0 +1,11 @@
+Muse Spark Open Kernel Challenge 2026, serving-track entry
+
+The file patch/okc-serving.diff is a patch against SGLang
+(https://github.com/sgl-project/sglang) at commit 297e54fd (v0.5.23), which is
+licensed under the Apache License, Version 2.0. The patch adds new files and
+edits existing SGLang files. Context and removed lines in the diff are SGLang's;
+added lines are ours. Each new file carries an SPDX header, and each edited
+SGLang file carries a "Modified 2026" line.
+
+No SGLang source tree, model weights, judge code or third-party kernel code is
+included in this repository.

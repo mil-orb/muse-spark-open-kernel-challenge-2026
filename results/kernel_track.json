@@ -1,0 +1,42 @@
+{
+ "read_utc": "2026-11-24",
+ "source": "okc leaderboard <problem> --json, final boards after the organizers' review",
+ "note": "entries built on public Apache-2.0 baselines; code not included in this repo",
+ "problems": [
+  {
+   "problem": "muse_decode_layer",
+   "name": "Whole decoder layer",
+   "speedup": 2.2495,
+   "rank": 272,
+   "entries": 1297
+  },
+  {
+   "problem": "muse_attention_decode",
+   "name": "Gated attention decode",
+   "speedup": 2.5741,
+   "rank": 399,
+   "entries": 1380
+  },
+  {
+   "problem": "muse_moe_w4a16",
+   "name": "Routed experts",
+   "speedup": 2.3154,
+   "rank": 468,
+   "entries": 1423
+  },
+  {
+   "problem": "muse_prefill_layer",
+   "name": "Prefill layer",
+   "speedup": 1.728,
+   "rank": 371,
+   "entries": 896
+  },
+  {
+   "problem": "muse_bf16_proj",
+   "name": "Dense projections",
+   "speedup": 1.5004,
+   "rank": 386,
+   "entries": 1741
+  }
+ ]
+}

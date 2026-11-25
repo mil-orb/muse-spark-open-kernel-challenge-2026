@@ -1,0 +1,400 @@
+{
+ "patch_sha256": "251aaf06210f26f7ca2d08ae3a9e23498bde234e0b79228f890db2396b6cae45",
+ "method": "Strip comments and Python docstrings; keep embedded CUDA source; remove whitespace; retain lines with at least 25 remaining characters. Count occurrences, match against the union of unique public source contents.",
+ "flag_threshold_percent": 5,
+ "flagged": [
+  "python/sglang/kernels/jit/csrc/gemm/okc_moe_prefill_rp/okc_moe_prefill_rp.cuh"
+ ],
+ "files": [
+  {
+   "file": "python/sglang/kernels/jit/csrc/gemm/okc_moe_decode/okc_moe_decode.cuh",
+   "added_lines_eligible": 413,
+   "added_lines_matching": 14,
+   "added_percent": 3.39,
+   "whole_file_eligible": 413,
+   "whole_file_matching": 14,
+   "whole_file_percent": 3.39
+  },
+  {
+   "file": "python/sglang/kernels/jit/csrc/gemm/okc_moe_prefill_rp/okc_moe_prefill_rp.cuh",
+   "added_lines_eligible": 708,
+   "added_lines_matching": 52,
+   "added_percent": 7.345,
+   "whole_file_eligible": 708,
+   "whole_file_matching": 52,
+   "whole_file_percent": 7.345
+  },
+  {
+   "file": "python/sglang/kernels/jit/csrc/kvcacheio/staged_write_back.cuh",
+   "added_lines_eligible": 10,
+   "added_lines_matching": 0,
+   "added_percent": 0.0,
+   "whole_file_eligible": 206,
+   "whole_file_matching": 0,
+   "whole_file_percent": 0.0
+  },
+  {
+   "file": "python/sglang/kernels/ops/moe/okc_moe_decode.py",
+   "added_lines_eligible": 58,
+   "added_lines_matching": 1,
+   "added_percent": 1.724,
+   "whole_file_eligible": 58,
+   "whole_file_matching": 1,
+   "whole_file_percent": 1.724
+  },
+  {
+   "file": "python/sglang/kernels/ops/moe/okc_moe_prefill_rp.py",
+   "added_lines_eligible": 48,
+   "added_lines_matching": 1,
+   "added_percent": 2.083,
+   "whole_file_eligible": 48,
+   "whole_file_matching": 1,
+   "whole_file_percent": 2.083
+  },
+  {
+   "file": "python/sglang/kernels/ops/moe/okc_moe_repack.py",
+   "added_lines_eligible": 67,
+   "added_lines_matching": 1,
+   "added_percent": 1.493,
+   "whole_file_eligible": 67,
+   "whole_file_matching": 1,
+   "whole_file_percent": 1.493
+  },
+  {
+   "file": "python/sglang/kernels/ops/moe/okc_moe_rp.py",
+   "added_lines_eligible": 56,
+   "added_lines_matching": 1,
+   "added_percent": 1.786,
+   "whole_file_eligible": 56,
+   "whole_file_matching": 1,
+   "whole_file_percent": 1.786
+  },
+  {
+   "file": "python/sglang/kernels/ops/speculative/fused_kv_materialize.py",
+   "added_lines_eligible": 25,
+   "added_lines_matching": 0,
+   "added_percent": 0.0,
+   "whole_file_eligible": 210,
+   "whole_file_matching": 1,
+   "whole_file_percent": 0.476
+  },
+  {
+   "file": "python/sglang/kernels/ops/speculative/ngram_lookup.py",
+   "added_lines_eligible": 77,
+   "added_lines_matching": 1,
+   "added_percent": 1.299,
+   "whole_file_eligible": 77,
+   "whole_file_matching": 1,
+   "whole_file_percent": 1.299
+  },
+  {
+   "file": "python/sglang/srt/entrypoints/openai/parallel_prompt_encode.py",
+   "added_lines_eligible": 17,
+   "added_lines_matching": 0,
+   "added_percent": 0.0,
+   "whole_file_eligible": 172,
+   "whole_file_matching": 0,
+   "whole_file_percent": 0.0
+  },
+  {
+   "file": "python/sglang/srt/environ.py",
+   "added_lines_eligible": 9,
+   "added_lines_matching": 0,
+   "added_percent": 0.0,
+   "whole_file_eligible": 919,
+   "whole_file_matching": 0,
+   "whole_file_percent": 0.0
+  },
+  {
+   "file": "python/sglang/srt/layers/attention/flashattention_backend.py",
+   "added_lines_eligible": 8,
+   "added_lines_matching": 0,
+   "added_percent": 0.0,
+   "whole_file_eligible": 1555,
+   "whole_file_matching": 2,
+   "whole_file_percent": 0.129
+  },
+  {
+   "file": "python/sglang/srt/layers/communication/muse_spark_gemm_ag.py",
+   "added_lines_eligible": 21,
+   "added_lines_matching": 0,
+   "added_percent": 0.0,
+   "whole_file_eligible": 41,
+   "whole_file_matching": 1,
+   "whole_file_percent": 2.439
+  },
+  {
+   "file": "python/sglang/srt/layers/communication/muse_spark_row_parallel.py",
+   "added_lines_eligible": 31,
+   "added_lines_matching": 0,
+   "added_percent": 0.0,
+   "whole_file_eligible": 31,
+   "whole_file_matching": 0,
+   "whole_file_percent": 0.0
+  },
+  {
+   "file": "python/sglang/srt/layers/muse_spark/muse_spark_fp4_moe.py",
+   "added_lines_eligible": 4,
+   "added_lines_matching": 0,
+   "added_percent": 0.0,
+   "whole_file_eligible": 369,
+   "whole_file_matching": 7,
+   "whole_file_percent": 1.897
+  },
+  {
+   "file": "python/sglang/srt/layers/muse_spark/muse_spark_nvfp4_moe.py",
+   "added_lines_eligible": 1,
+   "added_lines_matching": 0,
+   "added_percent": 0.0,
+   "whole_file_eligible": 98,
+   "whole_file_matching": 1,
+   "whole_file_percent": 1.02
+  },
+  {
+   "file": "python/sglang/srt/managers/tokenizer_manager.py",
+   "added_lines_eligible": 5,
+   "added_lines_matching": 0,
+   "added_percent": 0.0,
+   "whole_file_eligible": 1873,
+   "whole_file_matching": 2,
+   "whole_file_percent": 0.107
+  },
+  {
+   "file": "python/sglang/srt/mem_cache/pool_host/base.py",
+   "added_lines_eligible": 1,
+   "added_lines_matching": 0,
+   "added_percent": 0.0,
+   "whole_file_eligible": 220,
+   "whole_file_matching": 3,
+   "whole_file_percent": 1.364
+  },
+  {
+   "file": "python/sglang/srt/models/muse_spark.py",
+   "added_lines_eligible": 68,
+   "added_lines_matching": 0,
+   "added_percent": 0.0,
+   "whole_file_eligible": 842,
+   "whole_file_matching": 2,
+   "whole_file_percent": 0.238
+  },
+  {
+   "file": "python/sglang/srt/speculative/dflash_worker_v2.py",
+   "added_lines_eligible": 95,
+   "added_lines_matching": 0,
+   "added_percent": 0.0,
+   "whole_file_eligible": 1618,
+   "whole_file_matching": 2,
+   "whole_file_percent": 0.124
+  }
+ ],
+ "flagged_file_matching_lines": [
+  {
+   "line": 30,
+   "normalized": "#include<tvm/ffi/container/tensor.h>"
+  },
+  {
+   "line": 119,
+   "normalized": "__device____forceinline__uint32_tsmem_u32(constvoid*p){"
+  },
+  {
+   "line": 122,
+   "normalized": "__device____forceinline__voidmbar_init(uint64_t*bar,intcount){"
+  },
+  {
+   "line": 129,
+   "normalized": "__device____forceinline__voidmbar_arrive(uint64_t*bar){"
+  },
+  {
+   "line": 232,
+   "normalized": "__device____forceinline__voidwg_fence(){"
+  },
+  {
+   "line": 233,
+   "normalized": "asmvolatile(\"wgmma.fence.sync.aligned;\\n\":::\"memory\");"
+  },
+  {
+   "line": 235,
+   "normalized": "__device____forceinline__voidwg_commit(){"
+  },
+  {
+   "line": 236,
+   "normalized": "asmvolatile(\"wgmma.commit_group.sync.aligned;\\n\":::\"memory\");"
+  },
+  {
+   "line": 240,
+   "normalized": "asmvolatile(\"wgmma.wait_group.sync.aligned%0;\\n\"::\"n\"(N):\"memory\");"
+  },
+  {
+   "line": 259,
+   "normalized": "\"wgmma.mma_async.sync.aligned.m64n32k16.f32.bf16.bf16\""
+  },
+  {
+   "line": 265,
+   "normalized": ":\"r\"(a[0]),\"r\"(a[1]),\"r\"(a[2]),\"r\"(a[3]),\"l\"(desc));"
+  },
+  {
+   "line": 271,
+   "normalized": "\"wgmma.mma_async.sync.aligned.m64n64k16.f32.bf16.bf16\""
+  },
+  {
+   "line": 272,
+   "normalized": "\"{%0,%1,%2,%3,%4,%5,%6,%7,%8,%9,%10,%11,%12,%13,%14,%15,\""
+  },
+  {
+   "line": 282,
+   "normalized": ":\"r\"(a[0]),\"r\"(a[1]),\"r\"(a[2]),\"r\"(a[3]),\"l\"(desc));"
+  },
+  {
+   "line": 293,
+   "normalized": "\"wgmma.mma_async.sync.aligned.m64n16k16.f32.bf16.bf16\""
+  },
+  {
+   "line": 294,
+   "normalized": "\"{%0,%1,%2,%3,%4,%5,%6,%7},\""
+  },
+  {
+   "line": 298,
+   "normalized": ":\"r\"(a[0]),\"r\"(a[1]),\"r\"(a[2]),\"r\"(a[3]),\"l\"(desc));"
+  },
+  {
+   "line": 304,
+   "normalized": "\"wgmma.mma_async.sync.aligned.m64n32k16.f32.bf16.bf16\""
+  },
+  {
+   "line": 311,
+   "normalized": ":\"r\"(a[0]),\"r\"(a[1]),\"r\"(a[2]),\"r\"(a[3]),\"l\"(desc));"
+  },
+  {
+   "line": 317,
+   "normalized": "\"wgmma.mma_async.sync.aligned.m64n48k16.f32.bf16.bf16\""
+  },
+  {
+   "line": 318,
+   "normalized": "\"{%0,%1,%2,%3,%4,%5,%6,%7,%8,%9,%10,%11,%12,%13,%14,%15,\""
+  },
+  {
+   "line": 319,
+   "normalized": "\"%16,%17,%18,%19,%20,%21,%22,%23},\""
+  },
+  {
+   "line": 327,
+   "normalized": ":\"r\"(a[0]),\"r\"(a[1]),\"r\"(a[2]),\"r\"(a[3]),\"l\"(desc));"
+  },
+  {
+   "line": 333,
+   "normalized": "\"wgmma.mma_async.sync.aligned.m64n64k16.f32.bf16.bf16\""
+  },
+  {
+   "line": 334,
+   "normalized": "\"{%0,%1,%2,%3,%4,%5,%6,%7,%8,%9,%10,%11,%12,%13,%14,%15,\""
+  },
+  {
+   "line": 335,
+   "normalized": "\"%16,%17,%18,%19,%20,%21,%22,%23,%24,%25,%26,%27,%28,%29,%30,%31},\""
+  },
+  {
+   "line": 345,
+   "normalized": ":\"r\"(a[0]),\"r\"(a[1]),\"r\"(a[2]),\"r\"(a[3]),\"l\"(desc));"
+  },
+  {
+   "line": 351,
+   "normalized": "\"wgmma.mma_async.sync.aligned.m64n80k16.f32.bf16.bf16\""
+  },
+  {
+   "line": 352,
+   "normalized": "\"{%0,%1,%2,%3,%4,%5,%6,%7,%8,%9,%10,%11,%12,%13,%14,%15,\""
+  },
+  {
+   "line": 354,
+   "normalized": "\"%32,%33,%34,%35,%36,%37,%38,%39},\""
+  },
+  {
+   "line": 366,
+   "normalized": ":\"r\"(a[0]),\"r\"(a[1]),\"r\"(a[2]),\"r\"(a[3]),\"l\"(desc));"
+  },
+  {
+   "line": 372,
+   "normalized": "\"wgmma.mma_async.sync.aligned.m64n96k16.f32.bf16.bf16\""
+  },
+  {
+   "line": 373,
+   "normalized": "\"{%0,%1,%2,%3,%4,%5,%6,%7,%8,%9,%10,%11,%12,%13,%14,%15,\""
+  },
+  {
+   "line": 389,
+   "normalized": ":\"r\"(a[0]),\"r\"(a[1]),\"r\"(a[2]),\"r\"(a[3]),\"l\"(desc));"
+  },
+  {
+   "line": 395,
+   "normalized": "\"wgmma.mma_async.sync.aligned.m64n112k16.f32.bf16.bf16\""
+  },
+  {
+   "line": 396,
+   "normalized": "\"{%0,%1,%2,%3,%4,%5,%6,%7,%8,%9,%10,%11,%12,%13,%14,%15,\""
+  },
+  {
+   "line": 399,
+   "normalized": "\"%48,%49,%50,%51,%52,%53,%54,%55},\""
+  },
+  {
+   "line": 415,
+   "normalized": ":\"r\"(a[0]),\"r\"(a[1]),\"r\"(a[2]),\"r\"(a[3]),\"l\"(desc));"
+  },
+  {
+   "line": 445,
+   "normalized": "constintlane=threadIdx.x&31;"
+  },
+  {
+   "line": 472,
+   "normalized": "if((threadIdx.x&31)!=0)return;"
+  },
+  {
+   "line": 632,
+   "normalized": "constintlane=threadIdx.x&31;"
+  },
+  {
+   "line": 749,
+   "normalized": "asmvolatile(\"fence.mbarrier_init.release.cluster;\":::\"memory\");"
+  },
+  {
+   "line": 923,
+   "normalized": "\"wgmma.mma_async.sync.aligned.m64n128k16.f32.bf16.bf16\""
+  },
+  {
+   "line": 924,
+   "normalized": "\"{%0,%1,%2,%3,%4,%5,%6,%7,%8,%9,%10,%11,%12,%13,%14,%15,\""
+  },
+  {
+   "line": 945,
+   "normalized": ":\"r\"(a[0]),\"r\"(a[1]),\"r\"(a[2]),\"r\"(a[3]),\"l\"(desc));"
+  },
+  {
+   "line": 1320,
+   "normalized": "extern__shared____align__(1024)uint8_tsmem_raw[];"
+  },
+  {
+   "line": 1328,
+   "normalized": "asmvolatile(\"fence.mbarrier_init.release.cluster;\":::\"memory\");"
+  },
+  {
+   "line": 1346,
+   "normalized": "if((threadIdx.x&31)!=0)return;"
+  },
+  {
+   "line": 1361,
+   "normalized": "constcuuint64_t*,constcuuint32_t*,constcuuint32_t*,CUtensorMapInterleave,"
+  },
+  {
+   "line": 1362,
+   "normalized": "CUtensorMapSwizzle,CUtensorMapL2promotion,CUtensorMapFloatOOBfill);"
+  },
+  {
+   "line": 1368,
+   "normalized": "cudaDriverEntryPointQueryResultq;"
+  },
+  {
+   "line": 1387,
+   "normalized": "CU_TENSOR_MAP_L2_PROMOTION_L2_256B,CU_TENSOR_MAP_FLOAT_OOB_FILL_NONE);"
+  }
+ ]
+}

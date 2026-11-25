@@ -1,0 +1,92 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 860 548" width="860" height="548" role="img" aria-label="What the patch changes on the request path" font-family="ui-sans-serif, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif">
+<rect width="860" height="548" rx="10" fill="#1a1a19"/>
+<text x="28.0" y="36.0" fill="#f0efec" font-size="17" text-anchor="start" font-weight="600">What the patch changes on the request path</text>
+<text x="28.0" y="56.0" fill="#c3c2b7" font-size="12.5" text-anchor="start" font-weight="400">Stock SGLang 297e54fd serving Muse Spark Open 816B, TP=8 on one 8x H200 node. Marked boxes are in patch/</text>
+<text x="29.0" y="92.0" fill="#f0efec" font-size="12.5" text-anchor="start" font-weight="600">REQUEST</text>
+<rect x="29" y="102" width="190" height="66" rx="8" fill="#232322" stroke="#383835" stroke-width="1.5"/>
+<text x="41.0" y="124.0" fill="#f0efec" font-size="12.5" text-anchor="start" font-weight="600">Chat request</text>
+<text x="41.0" y="142.0" fill="#c3c2b7" font-size="11" text-anchor="start" font-weight="400">74K-token first turn, then</text>
+<text x="41.0" y="157.0" fill="#c3c2b7" font-size="11" text-anchor="start" font-weight="400">turns of ~753 new tokens</text>
+<rect x="233" y="102" width="190" height="66" rx="8" fill="#17283d" stroke="#3987e5" stroke-width="1.5"/>
+<text x="245.0" y="124.0" fill="#f0efec" font-size="12.5" text-anchor="start" font-weight="600">Prompt encode</text>
+<text x="245.0" y="142.0" fill="#c3c2b7" font-size="11" text-anchor="start" font-weight="400">cached ids for earlier turns,</text>
+<text x="245.0" y="157.0" fill="#c3c2b7" font-size="11" text-anchor="start" font-weight="400">only new text is tokenized</text>
+<path d="M221.0,135.0 h9 m-4,-4 l4,4 l-4,4" stroke="#898781" stroke-width="1.5" fill="none"/>
+<rect x="437" y="102" width="190" height="66" rx="8" fill="#1a1a19" stroke="#3987e5" stroke-width="1.5" stroke-dasharray="5 4"/>
+<text x="449.0" y="124.0" fill="#f0efec" font-size="12.5" text-anchor="start" font-weight="600">Scheduler</text>
+<text x="449.0" y="142.0" fill="#c3c2b7" font-size="11" text-anchor="start" font-weight="400">mixed chunk: running rows</text>
+<text x="449.0" y="157.0" fill="#c3c2b7" font-size="11" text-anchor="start" font-weight="400">ride along with prefill</text>
+<path d="M425.0,135.0 h9 m-4,-4 l4,4 l-4,4" stroke="#898781" stroke-width="1.5" fill="none"/>
+<rect x="641" y="102" width="190" height="66" rx="8" fill="#1a1a19" stroke="#3987e5" stroke-width="1.5" stroke-dasharray="5 4"/>
+<text x="653.0" y="124.0" fill="#f0efec" font-size="12.5" text-anchor="start" font-weight="600">KV pools</text>
+<text x="653.0" y="142.0" fill="#c3c2b7" font-size="11" text-anchor="start" font-weight="400">stock prefix cache (92% hit),</text>
+<text x="653.0" y="157.0" fill="#c3c2b7" font-size="11" text-anchor="start" font-weight="400">full/sliding split set by flag</text>
+<path d="M629.0,135.0 h9 m-4,-4 l4,4 l-4,4" stroke="#898781" stroke-width="1.5" fill="none"/>
+<text x="29.0" y="204.0" fill="#f0efec" font-size="12.5" text-anchor="start" font-weight="600">PREFILL, PER LAYER  (16,384-token chunks, 8 ranks)</text>
+<rect x="29" y="214" width="190" height="66" rx="8" fill="#17283d" stroke="#3987e5" stroke-width="1.5"/>
+<text x="41.0" y="236.0" fill="#f0efec" font-size="12.5" text-anchor="start" font-weight="600">Attention + KV store</text>
+<text x="41.0" y="254.0" fill="#c3c2b7" font-size="11" text-anchor="start" font-weight="400">stock FA3; one fused store</text>
+<text x="41.0" y="269.0" fill="#c3c2b7" font-size="11" text-anchor="start" font-weight="400">writes FP8 K/V and casts q</text>
+<rect x="233" y="214" width="190" height="66" rx="8" fill="#232322" stroke="#383835" stroke-width="1.5"/>
+<text x="245.0" y="236.0" fill="#f0efec" font-size="12.5" text-anchor="start" font-weight="600">Router</text>
+<text x="245.0" y="254.0" fill="#c3c2b7" font-size="11" text-anchor="start" font-weight="400">stock top-k, exact,</text>
+<text x="245.0" y="269.0" fill="#c3c2b7" font-size="11" text-anchor="start" font-weight="400">issued beside the pooler</text>
+<path d="M221.0,247.0 h9 m-4,-4 l4,4 l-4,4" stroke="#898781" stroke-width="1.5" fill="none"/>
+<rect x="437" y="214" width="190" height="66" rx="8" fill="#17283d" stroke="#3987e5" stroke-width="1.5"/>
+<text x="449.0" y="236.0" fill="#f0efec" font-size="12.5" text-anchor="start" font-weight="600">Pooler</text>
+<text x="449.0" y="254.0" fill="#c3c2b7" font-size="11" text-anchor="start" font-weight="400">column slice per rank,</text>
+<text x="449.0" y="269.0" fill="#c3c2b7" font-size="11" text-anchor="start" font-weight="400">then one all-gather</text>
+<path d="M425.0,247.0 h9 m-4,-4 l4,4 l-4,4" stroke="#898781" stroke-width="1.5" fill="none"/>
+<rect x="641" y="214" width="190" height="66" rx="8" fill="#17283d" stroke="#3987e5" stroke-width="1.5"/>
+<text x="653.0" y="236.0" fill="#f0efec" font-size="12.5" text-anchor="start" font-weight="600">Route plan</text>
+<text x="653.0" y="254.0" fill="#c3c2b7" font-size="11" text-anchor="start" font-weight="400">stable sort by expert on</text>
+<text x="653.0" y="269.0" fill="#c3c2b7" font-size="11" text-anchor="start" font-weight="400">the GPU, no host sync</text>
+<path d="M629.0,247.0 h9 m-4,-4 l4,4 l-4,4" stroke="#898781" stroke-width="1.5" fill="none"/>
+<path d="M736.0,280 v9 H124.0 v7 m-4,-4 l4,4 l4,-4" stroke="#898781" stroke-width="1.5" fill="none"/>
+<rect x="29" y="296" width="190" height="66" rx="8" fill="#17283d" stroke="#3987e5" stroke-width="1.5"/>
+<text x="41.0" y="318.0" fill="#f0efec" font-size="12.5" text-anchor="start" font-weight="600">Expert GEMMs (prefill)</text>
+<text x="41.0" y="336.0" fill="#c3c2b7" font-size="11" text-anchor="start" font-weight="400">2 launches, wgmma tiles,</text>
+<text x="41.0" y="351.0" fill="#c3c2b7" font-size="11" text-anchor="start" font-weight="400">NVFP4 decoded in registers</text>
+<rect x="233" y="296" width="190" height="66" rx="8" fill="#17283d" stroke="#3987e5" stroke-width="1.5"/>
+<text x="245.0" y="318.0" fill="#f0efec" font-size="12.5" text-anchor="start" font-weight="600">Unpooler</text>
+<text x="245.0" y="336.0" fill="#c3c2b7" font-size="11" text-anchor="start" font-weight="400">row block per rank,</text>
+<text x="245.0" y="351.0" fill="#c3c2b7" font-size="11" text-anchor="start" font-weight="400">rank-ordered gather</text>
+<path d="M221.0,329.0 h9 m-4,-4 l4,4 l-4,4" stroke="#898781" stroke-width="1.5" fill="none"/>
+<rect x="437" y="296" width="190" height="66" rx="8" fill="#1a1a19" stroke="#3987e5" stroke-width="1.5" stroke-dasharray="5 4"/>
+<text x="449.0" y="318.0" fill="#f0efec" font-size="12.5" text-anchor="start" font-weight="600">All-reduce</text>
+<text x="449.0" y="336.0" fill="#c3c2b7" font-size="11" text-anchor="start" font-weight="400">NVSwitch multicast (NVLS)</text>
+<text x="449.0" y="351.0" fill="#c3c2b7" font-size="11" text-anchor="start" font-weight="400">for the large reduces</text>
+<path d="M425.0,329.0 h9 m-4,-4 l4,4 l-4,4" stroke="#898781" stroke-width="1.5" fill="none"/>
+<rect x="641" y="296" width="190" height="66" rx="8" fill="#17283d" stroke="#3987e5" stroke-width="1.5"/>
+<text x="653.0" y="318.0" fill="#f0efec" font-size="12.5" text-anchor="start" font-weight="600">Host cache write-back</text>
+<text x="653.0" y="336.0" fill="#c3c2b7" font-size="11" text-anchor="start" font-weight="400">1,024 tokens per launch,</text>
+<text x="653.0" y="351.0" fill="#c3c2b7" font-size="11" text-anchor="start" font-weight="400">one copy per run of pages</text>
+<path d="M629.0,329.0 h9 m-4,-4 l4,4 l-4,4" stroke="#898781" stroke-width="1.5" fill="none"/>
+<text x="29.0" y="398.0" fill="#f0efec" font-size="12.5" text-anchor="start" font-weight="600">DECODE STEP  (one 8-token verify block)</text>
+<rect x="29" y="408" width="190" height="66" rx="8" fill="#232322" stroke="#383835" stroke-width="1.5"/>
+<text x="41.0" y="430.0" fill="#f0efec" font-size="12.5" text-anchor="start" font-weight="600">DFlash drafter</text>
+<text x="41.0" y="448.0" fill="#c3c2b7" font-size="11" text-anchor="start" font-weight="400">stock, 8 draft tokens</text>
+<text x="41.0" y="463.0" fill="#c3c2b7" font-size="11" text-anchor="start" font-weight="400">per step</text>
+<rect x="233" y="408" width="190" height="66" rx="8" fill="#17283d" stroke="#3987e5" stroke-width="1.5"/>
+<text x="245.0" y="430.0" fill="#f0efec" font-size="12.5" text-anchor="start" font-weight="600">Prompt lookup</text>
+<text x="245.0" y="448.0" fill="#c3c2b7" font-size="11" text-anchor="start" font-weight="400">per-request n-gram match</text>
+<text x="245.0" y="463.0" fill="#c3c2b7" font-size="11" text-anchor="start" font-weight="400">overwrites draft slots</text>
+<path d="M221.0,441.0 h9 m-4,-4 l4,4 l-4,4" stroke="#898781" stroke-width="1.5" fill="none"/>
+<rect x="437" y="408" width="190" height="66" rx="8" fill="#17283d" stroke="#3987e5" stroke-width="1.5"/>
+<text x="449.0" y="430.0" fill="#f0efec" font-size="12.5" text-anchor="start" font-weight="600">Verify forward</text>
+<text x="449.0" y="448.0" fill="#c3c2b7" font-size="11" text-anchor="start" font-weight="400">persistent expert kernel:</text>
+<text x="449.0" y="463.0" fill="#c3c2b7" font-size="11" text-anchor="start" font-weight="400">1 launch, weights read once</text>
+<path d="M425.0,441.0 h9 m-4,-4 l4,4 l-4,4" stroke="#898781" stroke-width="1.5" fill="none"/>
+<rect x="641" y="408" width="190" height="66" rx="8" fill="#17283d" stroke="#3987e5" stroke-width="1.5"/>
+<text x="653.0" y="430.0" fill="#f0efec" font-size="12.5" text-anchor="start" font-weight="600">Commit</text>
+<text x="653.0" y="448.0" fill="#c3c2b7" font-size="11" text-anchor="start" font-weight="400">stock greedy accept; draft</text>
+<text x="653.0" y="463.0" fill="#c3c2b7" font-size="11" text-anchor="start" font-weight="400">KV commit in verify graph</text>
+<path d="M629.0,441.0 h9 m-4,-4 l4,4 l-4,4" stroke="#898781" stroke-width="1.5" fill="none"/>
+<rect x="29" y="499" width="20" height="14" rx="4" fill="#17283d" stroke="#3987e5" stroke-width="1.5"/>
+<text x="57.0" y="510.0" fill="#c3c2b7" font-size="12" text-anchor="start" font-weight="400">changed or added by the patch</text>
+<rect x="261.7" y="499" width="20" height="14" rx="4" fill="#1a1a19" stroke="#3987e5" stroke-width="1.5" stroke-dasharray="5 4"/>
+<text x="289.7" y="510.0" fill="#c3c2b7" font-size="12" text-anchor="start" font-weight="400">stock feature turned on by a launch flag</text>
+<rect x="563.7" y="499" width="20" height="14" rx="4" fill="#232322" stroke="#383835" stroke-width="1.5"/>
+<text x="591.7" y="510.0" fill="#c3c2b7" font-size="12" text-anchor="start" font-weight="400">stock, unchanged</text>
+<text x="29.0" y="532.0" fill="#898781" font-size="11.5" text-anchor="start" font-weight="400">Outputs stay within the judge's agreement bounds; routing is exact top-k and no model work is skipped.</text>
+</svg>

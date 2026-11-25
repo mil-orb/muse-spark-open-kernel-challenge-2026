@@ -1,0 +1,41 @@
+{
+ "run": "3d387306",
+ "basis": "judge frontier: our throughput at stock's per-user speed, same node, paired reps",
+ "per_load": [
+  {
+   "concurrency": 1,
+   "ratio": 1.9587,
+   "stock_gpu_s_per_mtok": 154.5,
+   "ours_gpu_s_per_mtok": 78.88,
+   "gpu_time_saved_pct": 48.9
+  },
+  {
+   "concurrency": 4,
+   "ratio": 1.9365,
+   "stock_gpu_s_per_mtok": 100.51,
+   "ours_gpu_s_per_mtok": 51.9,
+   "gpu_time_saved_pct": 48.4
+  },
+  {
+   "concurrency": 16,
+   "ratio": 2.0991,
+   "stock_gpu_s_per_mtok": 81.39,
+   "ours_gpu_s_per_mtok": 38.77,
+   "gpu_time_saved_pct": 52.4
+  },
+  {
+   "concurrency": 32,
+   "ratio": 2.0382,
+   "stock_gpu_s_per_mtok": 79.03,
+   "ours_gpu_s_per_mtok": 38.77,
+   "gpu_time_saved_pct": 50.9
+  }
+ ],
+ "geomean_ratio": 2.0071,
+ "geomean_gpu_time_saved_pct": 50.2,
+ "caveats": [
+  "one scored run; 32 users had a single repetition",
+  "provisional until the organizers' held-out reruns",
+  "holds for the judge workload (74K-token first turns, 13 turns, 220-token outputs, 92% cache hit)"
+ ]
+}

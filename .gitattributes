@@ -1,0 +1,5 @@
+* text=auto eol=lf
+patch/*.diff -text
+*.svg text eol=lf
+*.gif binary
+*.mp4 binary
